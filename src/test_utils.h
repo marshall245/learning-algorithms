@@ -1,0 +1,1 @@
+int show_array(long * arr, long long len, int from_begin, int from_end);
