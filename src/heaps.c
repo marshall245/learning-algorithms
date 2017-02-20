@@ -5,21 +5,27 @@
 #include <stdlib.h>
 
 long long parent(long long ix) {
+	// find the index of a node's parent in the heap
 	return ix / 2; // floor division
 }
 
 long long left_ix(long long ix) {
+	// the index of the left child node
 	return 2 * ix;
 }
 
 long long right_ix(long long ix) {
+	// the index of the right child node
 	return 2 * ix + 1;
 }
 
 void max_heapify(long * arr, long long ix, long long arrlen) {
+	// apply the max heap property to the sub tree begining at ix
 	long long l, r, largest;
+	
 	l = left_ix(ix);
 	r = right_ix(ix);
+	
 	if ((l < arrlen) && (arr[l] > arr[ix])) {
 		largest = l;
 	} else {
@@ -35,11 +41,14 @@ void max_heapify(long * arr, long long ix, long long arrlen) {
 		arr[ix] = arr[largest];
 		arr[largest] = tmp;
 
+		// recurse into the tree
 		max_heapify(arr, largest, arrlen);
 	}
 }
 
 void build_max_heap(long *arr, long long arrlen) {
+	// turn an array into a heap representation with 
+	// the max heap property
 	long long i;
 	for (i = arrlen / 2; i >= 0; i--) {
 		max_heapify(arr, i, arrlen);
@@ -47,6 +56,7 @@ void build_max_heap(long *arr, long long arrlen) {
 }
 
 // additional heap algorithms, beyond sorting
+
 long heapmax(long * arr) {
 	return arr[0];
 }

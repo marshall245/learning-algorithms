@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int min(int a, int b) {
+	// find minimum between to ints
 	if (a < b) {
 		return a;
 	}
@@ -11,6 +12,7 @@ int show_array(long * arr, long long len, int from_begin, int from_end) {
 	// prints an array such as "1 2 3 ... 9 10 11"
 	
 	int ellipsebound, i;
+	
 	ellipsebound = min(3, (int) (len - (from_end + from_begin)));
 
 	// check boundary conditions

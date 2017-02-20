@@ -84,17 +84,17 @@ int main() {
 
 	test_sort(quicksort);
 
-	timed_sort(100000, bubble_sort); // bubble_sort, 10,000
+	timed_sort(100000, bubble_sort); // bubble_sort, 100,000
 
-	timed_sort(100000, insertion_sort); // insertion_sort, 10,000
+	timed_sort(100000, insertion_sort); // insertion_sort, 100,000
 
-    timed_sort(100000, merge_sort); // merge_sort 1,000,000
+    timed_sort(100000, merge_sort); // merge_sort 100,000
 
-	timed_sort(100000, merge_w_instn_sort); // merge_w_instn_sort 1,000,000
+	timed_sort(100000, merge_w_instn_sort); // merge_w_instn_sort 100,000
 
-	timed_sort(100000, heap_sort); // heap_sort 1,000,000
+	timed_sort(100000, heap_sort); // heap_sort 100,000
 
-	timed_sort(100000, quicksort); // quicksort 1,000,000
+	timed_sort(100000, quicksort); // quicksort 100,000
 
 	// trace out the merge_sort growth
 	printf("%s\n", "trace out the growth pattern for merge_sort");
