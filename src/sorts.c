@@ -27,8 +27,8 @@ void bubble_sort(long * arr, long long len) {
 
 void insertion_sort(long * arr, long long len) {
 	// conducts inplace insertion sort
-	int key;
-	int i, j;
+	long key;
+	long long i, j;
 	for (i=1; i < len; i++) {
 		key = arr[i];
 
@@ -98,7 +98,7 @@ void _merge(long * arr, long long p, long long q, long long r) {
 void _go_mgsort(long * arr, long long p, long long r) {
 	// the recursing function for merge_sort(...)
 	if ((r - p) > 0) {
-		int q;
+		long long q;
 		q = (p + r) / 2;  // floor division
 
 		// recurse and merge the result
@@ -111,7 +111,7 @@ void _go_mgsort(long * arr, long long p, long long r) {
 void _go_ms_with_ins(long * arr, long long p, long long r) {
 	// the recursing function for merge_sort(...) when insertion=1
 	if ((r - p) > INSERTION_BOUNDARY) {
-		int q;
+		long long q;
 		q = (p + r) / 2;  // floor division
 
 		// recurse and merge the result
