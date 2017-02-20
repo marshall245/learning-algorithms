@@ -15,7 +15,7 @@ void bubble_sort(long * arr, long long len) {
 	long long i, j;
 
 	for (i=0; i < len; i++) {
-		for (j=len - 1; j > i + 1; j--) {
+		for (j=len - 1; j > i; j--) {
 			if (arr[j - 1] > arr[j]) {
 				tmp = arr[j - 1];
 				arr[j - 1] = arr[j];
@@ -33,7 +33,7 @@ void insertion_sort(long * arr, long long len) {
 		key = arr[i];
 
 		j = i - 1;
-		while ((j > 0) && (arr[j] > key)) {
+		while ((j >= 0) && (arr[j] > key)) {
 			arr[j + 1] = arr[j];
 			j--;
 		}
