@@ -10,7 +10,7 @@ void test_sort(void (*foo)(long *, long long)) {
 	// declare test vars
 	int truth = 1;
 	long long len = 10, k;
-	long arr[10] = {0, 11, 6, 3, 42, 6, 5, 7, 1, 2};
+	long arr[10] = {6, 11, 0, 3, 42, 6, 5, 7, 1, 2};
 	long sorted[10] = {0, 1, 2, 3, 5, 6, 6, 7, 11, 42};
 
 	// show, sort, then show again
